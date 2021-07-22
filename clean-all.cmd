@@ -7,7 +7,7 @@ pushd dnSpy\dnSpy.Images && git clean -xdf && popd || goto :error
 pushd Extensions\dnSpy.Debugger\netcorefiles && git clean -xdf && popd || goto :error
 pushd dnSpy\Roslyn\Roslyn.ExpressionCompiler && git clean -xdf && popd || goto :error
 pushd Extensions\dnSpy.Debugger\Mono.Debugger.Soft && git clean -xdf && popd || goto :error
-git clean -xdf || goto :error
+git clean -Xdf || goto :error
 
 goto :EOF
 
