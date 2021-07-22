@@ -6,8 +6,8 @@
 	url = https://github.com/dnSpyEx/ICSharpCode.TreeView.git
 [submodule "Plugins/ILSpy.Decompiler/ICSharpCode.Decompiler"]
 	path = Extensions/ILSpy.Decompiler/ICSharpCode.Decompiler
-	url = https://github.com/dnSpyEx/ILSpy.git
-	branch = ilspyv2
+	url = https://github.com/jmuhlich/ILSpy.git
+	branch = ksp-deobfuscation
 [submodule "dnSpy/dnSpy.Images"]
 	path = dnSpy/dnSpy.Images
 	url = https://github.com/dnSpyEx/dnSpy.Images.git
