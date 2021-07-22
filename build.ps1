@@ -1,9 +1,9 @@
-param([string]$buildtfm = 'all', [switch]$NoMsbuild)
+param([string]$buildtfm = 'all', [switch]$debug, [switch]$NoMsbuild)
 $ErrorActionPreference = 'Stop'
 
 $netframework_tfm = 'net48'
 $net_tfm = 'net5.0-windows'
-$configuration = 'Release'
+$configuration = if ($debug) {'Debug'} else {'Release'}
 $net_baseoutput = "dnSpy\dnSpy\bin\$configuration"
 $apphostpatcher_dir = "Build\AppHostPatcher"
 
@@ -70,6 +70,8 @@ function Build-Net {
 $buildNet	 = $buildtfm -eq 'all' -or $buildtfm -eq 'netframework'
 $buildNetX86 = $buildtfm -eq 'all' -or $buildtfm -eq 'net-x86'
 $buildNetX64 = $buildtfm -eq 'all' -or $buildtfm -eq 'net-x64'
+
+Write-Host "Using $configuration configuration"
 
 if ($buildNetX86 -or $buildNetX64) {
 	if ($NoMsbuild) {
