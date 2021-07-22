@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "build - Debug",
+			"command": "powershell",
+			"type": "process",
+			"args": [
+				"${workspaceFolder}/build.ps1",
+				"-NoMsBuild",
+				"-debug",
+				"-buildtfm", "net-x64"
+			],
+			"problemMatcher": "$msCompile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "build - Release",
+			"command": "powershell",
+			"type": "process",
+			"args": [
+				"${workspaceFolder}/build.ps1",
+				"-NoMsBuild",
+				"-buildtfm", "net-x64"
+			],
+			"problemMatcher": "$msCompile",
+			"group": "build"
+		}
+    ]
+}

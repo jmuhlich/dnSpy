@@ -1,0 +1,4 @@
+{
+    "csharp.suppressBuildAssetsNotification": true,
+    "omnisharp.disableMSBuildDiagnosticWarning": true
+}
